@@ -118,7 +118,7 @@ class Program
                 {
                     if (amount <= balance)
                     {
-                        balance -= amount;
+                        balance = balance -  amount;
                         Console.WriteLine($"Withdrawal successful. New Balance: Rs. {balance}");
                     }
                     else
