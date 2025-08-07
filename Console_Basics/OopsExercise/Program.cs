@@ -58,7 +58,7 @@ class Program
     }
     class Developer : Employee
     {
-        public override void Work()
+        public new void Work()
         {
             Console.WriteLine("Developer is working");
         }
@@ -108,16 +108,21 @@ class Program
         Circle circle = new Circle();
         circle.Draw();
 
-        
+        Developer dev = new Developer();
+        dev.Work();
+
         Employee emp = new Developer();
-        emp.Work();                        
 
-        Developer downcasted = (Developer)emp; 
-        downcasted.WriteCode();              
+        emp.Work();
+        string s = "2";
+        int x = (int)s;
 
-        SmartPhone phone = new SmartPhone();
-        Device deviceRef = phone;           
-        deviceRef.Start();                  
+        Developer downcasted = (Developer)emp;
+        downcasted.WriteCode();
+
+
+        Device deviceRef = new SmartPhone(); ;
+        deviceRef.Start();
 
         SmartPhone phoneRef = (SmartPhone)deviceRef;
         phoneRef.Start("Silent");
