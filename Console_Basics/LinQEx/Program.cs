@@ -40,7 +40,8 @@ class Program
         //{
         //    Console.WriteLine(i.EmpName + " ");
         //}
-        var firstEmp = employees.First();
+
+        var firstEmp = employees.FirstOrDefault(); //first() -> does not handle 
         //Console.WriteLine(firstEmp.EmpName);
         bool anyDelhi = employees.Any(e => e.City == "Delhi");
         bool allAbove = employees.All(e => e.Salary > 10000);
