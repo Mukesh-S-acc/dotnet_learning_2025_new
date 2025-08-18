@@ -13,13 +13,17 @@ namespace DataAccess
         {
             using (SqlConnection connect = new SqlConnection(connection))
             {
-                connect.Open();
+                 connect.Open();
 
-                string query = @"insert into books 
+               string query = @"insert into books 
                                 (title, authorid, genreid, isbn, publishedyear, copiesavailable) 
+
                                 values (@title, @aid, @gid, @isbn, @year, @copies)";
 
+               
+                
                 SqlCommand cd = new SqlCommand(query, connect);
+
                 cd.Parameters.AddWithValue("@title", book.Title);
                 cd.Parameters.AddWithValue("@aid", book.AuthorId);
                 cd.Parameters.AddWithValue("@gid", book.GenreId);
