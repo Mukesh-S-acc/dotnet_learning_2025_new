@@ -3,17 +3,18 @@ using Models;
 
 namespace Business
 {
-    public class LibraryService
+    internal class LibraryOps
     {
         public BookStorage bookRepo = new BookStorage();
 
         public void AddBook(Book book)
         {
 
-           if (book.AuthorId <= 0 || book.GenreId <= 0)
+           if (book.AuthorId <= 0 || book.GenreId <= 0 ||string.IsNullOrWhiteSpace(book.ISBN) ||  book.PublishedYear <= 0 || book.CopiesAvailable < 0)
             {
                 
-                throw new Exception("AuthorId and GenreId must be valid");
+                Console.Write("input must be valid");
+            
             }
 
             bookRepo.InsertBook(book);

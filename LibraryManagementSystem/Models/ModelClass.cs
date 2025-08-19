@@ -1,6 +1,6 @@
 ﻿namespace Models
 {
-    public class Author
+    internal record Author
     {
         public int AuthorId { get; set; }
         public string Name { get; set; }
@@ -41,6 +41,6 @@
         public int MemberId { get; set;}
         public int BookId {get; set;}
         public DateTime BorrowDate {get; set;}
-        public DateTime? ReturnDate { get; set;} 
+        public DateTime ReturnDate { get; set;} 
     }
 }
