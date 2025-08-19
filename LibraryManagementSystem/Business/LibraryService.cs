@@ -3,7 +3,7 @@ using Models;
 
 namespace Business
 {
-    public class LibraryOps
+    internal class LibraryOps
     {
         public BookStorage bookRepo = new BookStorage();
 

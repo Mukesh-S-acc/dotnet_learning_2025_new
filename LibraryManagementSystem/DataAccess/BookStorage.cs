@@ -6,7 +6,7 @@ namespace DataAccess
     public class BookStorage
     {
         private static string connection =
-            "Server=mazenet-test; Database=LibraryManagement;Trusted_Connection=True;";
+            "Server=mazenet-test; Database=LibraryManagement;Trusted_Connection=True;TrustServerCertificate=True;";
 
 
         public void InsertBook(Book book)
